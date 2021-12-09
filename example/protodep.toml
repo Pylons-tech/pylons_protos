@@ -23,6 +23,7 @@ proto_outdir = "./proto"
   target = "github.com/tendermint/tendermint"
   revision = "v0.35.0"
   path = "proto"
+  
 [[dependencies]]
   target = "github.com/Pylons-tech/pylons_protos"
   path = "proto"
