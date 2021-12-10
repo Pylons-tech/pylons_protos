@@ -7,24 +7,23 @@ proto_outdir = "./proto"
 [[dependencies]]
   target = "github.com/googleapis/api-common-protos"
   branch = "master"
-  path = "proto"
   
 [[dependencies]]
-  target = "github.com/gogo/protobuf"
-  revision = "v1.3.2"
-  path = "proto"
+  target = "github.com/regen-network/protobuf"
+  revision = "v1.3.3-alpha.regen.1"
   
 [[dependencies]]
-  target = "github.com/cosmos/cosmos-sdk"
+  target = "github.com/cosmos/cosmos-proto/proto"
+  branch = "main"
+  
+[[dependencies]]
+  target = "github.com/cosmos/cosmos-sdk/proto"
   revision = "v0.42.11"
-  path = "proto"
   
 [[dependencies]]
-  target = "github.com/tendermint/tendermint"
-  revision = "v0.35.0"
-  path = "proto"
+  target = "github.com/tendermint/spec/proto"
+  revision = "v0.7"
   
 [[dependencies]]
-  target = "github.com/Pylons-tech/pylons_protos"
-  path = "proto"
+  target = "github.com/Pylons-tech/pylons_protos/proto"
   branch = "develop"
