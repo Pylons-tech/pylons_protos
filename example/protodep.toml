@@ -26,4 +26,4 @@ proto_outdir = "./proto"
   
 [[dependencies]]
   target = "github.com/Pylons-tech/pylons_protos/proto"
-  branch = "develop"
+  branch = "main"
