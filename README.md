@@ -14,6 +14,8 @@ Copy the files in the `example` folder into your project. Then:
 	* `lang` - the language prefix to use for the protoc plugin you're compiling with (for instance, C++ would be `cpp`, since the protoc option is `cpp_out`
 	* `protopath` - `proto_outdir`
 
+It's also **strongly recommended** that your project's .gitignore file includes the location the protos are being downloaded to.
+
 ## Usage
 Run `protodep up -u -f` to download the Pylons protos and their dependencies. 
 Note that protodep *will* erase any files in `proto_outdir`; as such, if your project contains any protos of its own, they must be stored in a separate folder.
