@@ -4,7 +4,7 @@ on: push
 
 jobs:
   my-job:
-    name: My Job
+    name: Generate schema
     runs-on: ubuntu-latest
     steps:
       - name: Install protoc
@@ -21,6 +21,16 @@ jobs:
           go get github.com/chrusty/protoc-gen-jsonschema/cmd/protoc-gen-jsonschema
           go install github.com/chrusty/protoc-gen-jsonschema/cmd/protoc-gen-jsonschema@latest
           
+      - uses: actions/checkout@v1
+          
       - name: Emit schema
         run: |
-          echo "emit schema now"
+          protoc  --jsonschema_out= schema directory --proto_path=proto/pylons/* proto/epochs/*
+          
+      - name: Push commit
+        run: | 
+          git status
+          git add .
+          git commit -m "Emit JsonSchema for protos"
+          git fetch origin actions
+          git push origin HEAD:actions
