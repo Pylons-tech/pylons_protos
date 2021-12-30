@@ -4,8 +4,6 @@ outdir=schema
 lang=jsonschema
 protopath=prototmp
 
-mkdir protopath
-
 protoc --proto_path=$protopath/ --${lang}_out=$outdir/ proto/tendermint/abci/*
 protoc --proto_path=$protopath/ --${lang}_out=$outdir/ proto/tendermint/crypto/*
 protoc --proto_path=$protopath/ --${lang}_out=$outdir/ proto/tendermint/types/*
