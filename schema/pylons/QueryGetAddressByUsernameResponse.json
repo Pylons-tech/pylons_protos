@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$ref": "#/definitions/QueryGetAddressByUsernameResponse",
+    "definitions": {
+        "Pylonstech.pylons.pylons.AccountAddr": {
+            "properties": {
+                "value": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "QueryGetAddressByUsernameResponse": {
+            "properties": {
+                "address": {
+                    "$ref": "#/definitions/Pylonstech.pylons.pylons.AccountAddr",
+                    "additionalProperties": true
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        }
+    }
+}

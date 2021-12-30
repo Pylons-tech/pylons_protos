@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$ref": "#/definitions/PaymentInfo",
+    "definitions": {
+        "PaymentInfo": {
+            "properties": {
+                "purchaseID": {
+                    "type": "string"
+                },
+                "processorName": {
+                    "type": "string"
+                },
+                "payerAddr": {
+                    "type": "string"
+                },
+                "amount": {
+                    "type": "string"
+                },
+                "productID": {
+                    "type": "string"
+                },
+                "signature": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        }
+    }
+}

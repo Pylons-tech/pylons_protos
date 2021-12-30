@@ -1,0 +1,10 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$ref": "#/definitions/MsgGoogleInAppPurchaseGetCoinsResponse",
+    "definitions": {
+        "MsgGoogleInAppPurchaseGetCoinsResponse": {
+            "additionalProperties": true,
+            "type": "object"
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$ref": "#/definitions/MsgBurnDebtTokenResponse",
+    "definitions": {
+        "MsgBurnDebtTokenResponse": {
+            "additionalProperties": true,
+            "type": "object"
+        }
+    }
+}
