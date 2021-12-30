@@ -26,7 +26,8 @@ jobs:
           
       - uses: actions/checkout@v1
           
-      - name: Grab proto dependencies  
+      - name: Grab proto dependencies
+        run: protodep up -u -f
         
       - name: Emit schema
         run: |
