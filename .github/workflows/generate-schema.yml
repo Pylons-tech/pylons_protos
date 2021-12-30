@@ -25,7 +25,7 @@ jobs:
           
       - name: Emit schema
         run: |
-          protoc  --jsonschema_out=schema --proto_path=proto/pylons/* proto/epochs/*
+          protoc  --jsonschema_out=schema --proto_path=proto/pylons/*
           
       - name: Push commit
         run: | 
