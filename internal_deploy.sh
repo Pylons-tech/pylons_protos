@@ -4,6 +4,8 @@ outdir=schema
 lang=jsonschema
 protopath=prototmp
 
+protoc --proto_path=$protopath/ --${lang}_out=$outdir/ $protopath/gogoproto/gogo.proto*
+
 protoc --proto_path=$protopath/ --${lang}_out=$outdir/ $protopath/tendermint/abci/*
 protoc --proto_path=$protopath/ --${lang}_out=$outdir/ $protopath/tendermint/crypto/*
 protoc --proto_path=$protopath/ --${lang}_out=$outdir/ $protopath/tendermint/types/*
