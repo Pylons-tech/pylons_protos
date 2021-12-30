@@ -19,6 +19,6 @@ protoc --proto_path=$protopath/ --${lang}_out=$outdir/ $protopath/cosmos/crypto/
 protoc --proto_path=$protopath/ --${lang}_out=$outdir/ $protopath/cosmos/tx/signing/v1beta1/*
 protoc --proto_path=$protopath/ --${lang}_out=$outdir/ $protopath/cosmos/tx/v1beta1/*
 
-mv  -v $protopath/* proto/*
+cp -RT  $protopath/* proto/*
 
 protoc --proto_path=proto/ --${lang}_out=$outdir/ proto/pylons/*
