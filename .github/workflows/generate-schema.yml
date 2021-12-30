@@ -34,7 +34,7 @@ jobs:
         
       - name: Emit schema
         run: |
-          cp -a proto prototmp
+          cp -a /proto/. /prototmp/
           protoc --proto_path=prototmp/ --jsonschema_out=schema/ prototmp/pylons/*
 
           
