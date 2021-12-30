@@ -15,7 +15,7 @@ jobs:
         
       - name: Install protoc-gen-jsonschema
         run: |
-          echo "$GOPATH"
+          export PATH=${PATH}:`go env GOPATH`/bin
           GO111MODULE=on \
           go get github.com/chrusty/protoc-gen-jsonschema/cmd/protoc-gen-jsonschema &&
           go install github.com/chrusty/protoc-gen-jsonschema/cmd/protoc-gen-jsonschema
