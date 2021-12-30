@@ -4,6 +4,8 @@ outdir=schema
 lang=jsonschema
 protopath=prototmp
 
+find . -type d
+
 echo "gogo"
 
 protoc --proto_path=$protopath/ --${lang}_out=$outdir/ $protopath/gogoproto/gogo.proto*
