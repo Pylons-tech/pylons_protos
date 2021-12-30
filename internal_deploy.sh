@@ -2,9 +2,9 @@
 
 outdir=schema
 lang=jsonschema
-protopath=proto
+protopath=prototmp
 
-
+mkdir protopath
 
 protoc --proto_path=$protopath/ --${lang}_out=$outdir/ proto/tendermint/abci/*
 protoc --proto_path=$protopath/ --${lang}_out=$outdir/ proto/tendermint/crypto/*
@@ -21,4 +21,6 @@ protoc --proto_path=$protopath/ --${lang}_out=$outdir/ proto/cosmos/crypto/secp2
 protoc --proto_path=$protopath/ --${lang}_out=$outdir/ proto/cosmos/tx/signing/v1beta1/*
 protoc --proto_path=$protopath/ --${lang}_out=$outdir/ proto/cosmos/tx/v1beta1/*
 
-protoc --proto_path=$protopath/ --${lang}_out=$outdir/ proto/pylons/*
+mv  -v ~$protopath/* ~proto/*
+
+protoc --proto_path=proto/ --${lang}_out=$outdir/ proto/pylons/*
