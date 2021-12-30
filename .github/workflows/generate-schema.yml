@@ -21,16 +21,21 @@ jobs:
           go get github.com/chrusty/protoc-gen-jsonschema/cmd/protoc-gen-jsonschema
           go install github.com/chrusty/protoc-gen-jsonschema/cmd/protoc-gen-jsonschema@latest
           
+      - name: Install protodep
+        run: go get github.com/stormcat24/protodep@latest
+          
       - uses: actions/checkout@v1
           
+      - name: Grab proto dependencies  
+        
       - name: Emit schema
         run: |
-          protoc  --jsonschema_out=schema --proto_path=proto proto/pylons/*
+          sh internal_deploy.sh
           
       - name: Push commit
         run: | 
           git status
-          git add .
+          git add schema/pylons/*
           git commit -m "Emit JsonSchema for protos"
           git fetch origin actions
           git push origin HEAD:actions
