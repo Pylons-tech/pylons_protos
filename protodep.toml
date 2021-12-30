@@ -13,9 +13,8 @@ proto_outdir = "./prototmp"
   revision = "v1.3.3-alpha.regen.1"
   
 [[dependencies]]
-  target = "github.com/regen-network/protobuf"
+  target = "github.com/regen-network/protobuf/gogoproto"
   revision = "v1.3.3-alpha.regen.1"
-  path = "gogoproto"
   
 [[dependencies]]
   target = "github.com/cosmos/cosmos-proto/proto"
