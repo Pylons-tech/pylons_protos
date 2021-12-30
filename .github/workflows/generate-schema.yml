@@ -1,1 +1,24 @@
+name: Generate schema
 
+on: push
+
+jobs:
+  my-job:
+    name: My Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install protoc
+        uses: arduino/setup-protoc@v1
+        
+      - name: Setup Go environment
+        uses: actions/setup-go@v2.1.5
+        
+      - name: Install protoc-gen-jsonschema
+        run: |
+          GO111MODULE=on \
+          go get github.com/chrusty/protoc-gen-jsonschema/cmd/protoc-gen-jsonschema &&
+          go install github.com/chrusty/protoc-gen-jsonschema/cmd/protoc-gen-jsonschema
+          
+      - name: Emit schema
+        run: |
+          echo "emit schema now"
