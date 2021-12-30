@@ -8,7 +8,7 @@ find . -type d
 
 echo "gogo"
 
-protoc --proto_path=$protopath/ --${lang}_out=$outdir/ $protopath/gogo/gogoproto.proto*
+protoc --proto_path=$protopath/ --${lang}_out=all_fields_required:$outdir/ $protopath/gogo/gogoproto.proto*
 
 echo "tendermint"
 
