@@ -1,6 +1,6 @@
 name: Generate schema
 
-on: push
+on: release
 
 jobs:
   my-job:
@@ -34,7 +34,6 @@ jobs:
         
       - name: Emit schema
         run: |
-          mkdir schema/pylons/
           cp -a proto/* prototmp
           protoc --proto_path=prototmp/ --jsonschema_out=schema/pylons/ prototmp/pylons/*
           
