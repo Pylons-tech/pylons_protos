@@ -34,7 +34,9 @@ jobs:
         
       - name: Emit schema
         run: |
-          sh internal_deploy.sh
+          cp -a prototmp proto
+          protoc --proto_path=proto/ --jsonschema_out=schema/ proto/pylons/*
+
           
       - name: Push commit
         run: | 
