@@ -1,0 +1,72 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$ref": "#/definitions/ItemRecord",
+    "definitions": {
+        "ItemRecord": {
+            "properties": {
+                "ID": {
+                    "type": "string"
+                },
+                "doubles": {
+                    "items": {
+                        "$ref": "#/definitions/Pylonstech.pylons.pylons.DoubleKeyValue"
+                    },
+                    "type": "array"
+                },
+                "longs": {
+                    "items": {
+                        "$ref": "#/definitions/Pylonstech.pylons.pylons.LongKeyValue"
+                    },
+                    "type": "array"
+                },
+                "strings": {
+                    "items": {
+                        "$ref": "#/definitions/Pylonstech.pylons.pylons.StringKeyValue"
+                    },
+                    "type": "array"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "Pylonstech.pylons.pylons.DoubleKeyValue": {
+            "properties": {
+                "Key": {
+                    "type": "string"
+                },
+                "Value": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "DoubleKeyValue describes double key/value set"
+        },
+        "Pylonstech.pylons.pylons.LongKeyValue": {
+            "properties": {
+                "Key": {
+                    "type": "string"
+                },
+                "Value": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "LongKeyValue describes long key/value set"
+        },
+        "Pylonstech.pylons.pylons.StringKeyValue": {
+            "properties": {
+                "Key": {
+                    "type": "string"
+                },
+                "Value": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "StringKeyValue describes string key/value set"
+        }
+    }
+}

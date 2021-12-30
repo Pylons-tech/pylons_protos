@@ -1,0 +1,43 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$ref": "#/definitions/CoinIssuer",
+    "definitions": {
+        "CoinIssuer": {
+            "properties": {
+                "coinDenom": {
+                    "type": "string"
+                },
+                "packages": {
+                    "items": {
+                        "$ref": "#/definitions/Pylonstech.pylons.pylons.GoogleInAppPurchasePackage"
+                    },
+                    "type": "array"
+                },
+                "googleInAppPurchasePubKey": {
+                    "type": "string"
+                },
+                "entityName": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "CoinIssuer represents an entity or external blockchain"
+        },
+        "Pylonstech.pylons.pylons.GoogleInAppPurchasePackage": {
+            "properties": {
+                "packageName": {
+                    "type": "string"
+                },
+                "productID": {
+                    "type": "string"
+                },
+                "amount": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        }
+    }
+}

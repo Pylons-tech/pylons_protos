@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$ref": "#/definitions/MsgCreateAccount",
+    "definitions": {
+        "MsgCreateAccount": {
+            "properties": {
+                "creator": {
+                    "type": "string"
+                },
+                "username": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        }
+    }
+}

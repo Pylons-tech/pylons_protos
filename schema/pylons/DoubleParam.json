@@ -1,0 +1,42 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$ref": "#/definitions/DoubleParam",
+    "definitions": {
+        "DoubleParam": {
+            "properties": {
+                "key": {
+                    "type": "string"
+                },
+                "weightRanges": {
+                    "items": {
+                        "$ref": "#/definitions/Pylonstech.pylons.pylons.DoubleWeightRange"
+                    },
+                    "type": "array"
+                },
+                "program": {
+                    "type": "string",
+                    "description": "When program is not empty, weightRanges is ignored"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "DoubleParam describes the bounds on an item input/output parameter of type float64"
+        },
+        "Pylonstech.pylons.pylons.DoubleWeightRange": {
+            "properties": {
+                "lower": {
+                    "type": "string"
+                },
+                "upper": {
+                    "type": "string"
+                },
+                "weight": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "DoubleWeightRange describes weight range that produce double value"
+        }
+    }
+}

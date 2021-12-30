@@ -1,0 +1,73 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$ref": "#/definitions/QueryListCookbooksByCreatorResponse",
+    "definitions": {
+        "Pylonstech.pylons.pylons.Cookbook": {
+            "properties": {
+                "creator": {
+                    "type": "string"
+                },
+                "ID": {
+                    "type": "string"
+                },
+                "nodeVersion": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "developer": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string"
+                },
+                "supportEmail": {
+                    "type": "string"
+                },
+                "enabled": {
+                    "type": "boolean"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "QueryListCookbooksByCreatorResponse": {
+            "properties": {
+                "Cookbooks": {
+                    "items": {
+                        "$ref": "#/definitions/Pylonstech.pylons.pylons.Cookbook"
+                    },
+                    "type": "array"
+                },
+                "pagination": {
+                    "$ref": "#/definitions/cosmos.base.query.v1beta1.PageResponse",
+                    "additionalProperties": true,
+                    "description": "pagination defines the pagination in the response."
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "cosmos.base.query.v1beta1.PageResponse": {
+            "properties": {
+                "next_key": {
+                    "type": "string",
+                    "description": "next_key is the key to be passed to PageRequest.key to\n query the next page most efficiently",
+                    "format": "binary",
+                    "binaryEncoding": "base64"
+                },
+                "total": {
+                    "type": "string",
+                    "description": "total is total number of results available if PageRequest.count_total\n was set, its value is undefined otherwise"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "PageResponse is to be embedded in gRPC response messages where the\n corresponding request message has used PageRequest.\n\n  message SomeResponse {\n          repeated Bar results = 1;\n          PageResponse page = 2;\n  }"
+        }
+    }
+}

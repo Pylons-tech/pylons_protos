@@ -1,0 +1,176 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$ref": "#/definitions/ItemOutput",
+    "definitions": {
+        "ItemOutput": {
+            "properties": {
+                "ID": {
+                    "type": "string"
+                },
+                "doubles": {
+                    "items": {
+                        "$ref": "#/definitions/Pylonstech.pylons.pylons.DoubleParam"
+                    },
+                    "type": "array"
+                },
+                "longs": {
+                    "items": {
+                        "$ref": "#/definitions/Pylonstech.pylons.pylons.LongParam"
+                    },
+                    "type": "array"
+                },
+                "strings": {
+                    "items": {
+                        "$ref": "#/definitions/Pylonstech.pylons.pylons.StringParam"
+                    },
+                    "type": "array"
+                },
+                "mutableStrings": {
+                    "items": {
+                        "$ref": "#/definitions/Pylonstech.pylons.pylons.StringKeyValue"
+                    },
+                    "type": "array",
+                    "description": "defines a list of mutable strings whose value can be customized by the user"
+                },
+                "transferFee": {
+                    "items": {
+                        "$ref": "#/definitions/cosmos.base.v1beta1.Coin"
+                    },
+                    "type": "array"
+                },
+                "tradePercentage": {
+                    "type": "string",
+                    "description": "The percentage of a trade sale retained by the cookbook owner. In the range (0.0, 1.0)."
+                },
+                "quantity": {
+                    "type": "string",
+                    "description": "quantity defines the maximum amount of these items that can be created. A 0 value indicates an infinite supply"
+                },
+                "amountMinted": {
+                    "type": "string"
+                },
+                "tradeable": {
+                    "type": "boolean"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "ItemOutput models the continuum of valid outcomes for item generation in recipes"
+        },
+        "Pylonstech.pylons.pylons.DoubleParam": {
+            "properties": {
+                "key": {
+                    "type": "string"
+                },
+                "weightRanges": {
+                    "items": {
+                        "$ref": "#/definitions/Pylonstech.pylons.pylons.DoubleWeightRange"
+                    },
+                    "type": "array"
+                },
+                "program": {
+                    "type": "string",
+                    "description": "When program is not empty, weightRanges is ignored"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "DoubleParam describes the bounds on an item input/output parameter of type float64"
+        },
+        "Pylonstech.pylons.pylons.DoubleWeightRange": {
+            "properties": {
+                "lower": {
+                    "type": "string"
+                },
+                "upper": {
+                    "type": "string"
+                },
+                "weight": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "DoubleWeightRange describes weight range that produce double value"
+        },
+        "Pylonstech.pylons.pylons.IntWeightRange": {
+            "properties": {
+                "lower": {
+                    "type": "string"
+                },
+                "upper": {
+                    "type": "string"
+                },
+                "weight": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "IntWeightRange describes weight range that produce int value"
+        },
+        "Pylonstech.pylons.pylons.LongParam": {
+            "properties": {
+                "key": {
+                    "type": "string"
+                },
+                "weightRanges": {
+                    "items": {
+                        "$ref": "#/definitions/Pylonstech.pylons.pylons.IntWeightRange"
+                    },
+                    "type": "array"
+                },
+                "program": {
+                    "type": "string",
+                    "description": "When program is not empty, weightRanges is ignored"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "LongParam describes the bounds on an item input/output parameter of type int64"
+        },
+        "Pylonstech.pylons.pylons.StringKeyValue": {
+            "properties": {
+                "Key": {
+                    "type": "string"
+                },
+                "Value": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "StringKeyValue describes string key/value set"
+        },
+        "Pylonstech.pylons.pylons.StringParam": {
+            "properties": {
+                "key": {
+                    "type": "string"
+                },
+                "value": {
+                    "type": "string"
+                },
+                "program": {
+                    "type": "string",
+                    "description": "When program is not empty, value is ignored"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "StringParam describes an item input/output parameter of type string"
+        },
+        "cosmos.base.v1beta1.Coin": {
+            "properties": {
+                "denom": {
+                    "type": "string"
+                },
+                "amount": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "Coin defines a token with a denomination and an amount.\n\n NOTE: The amount field is an Int which implements the custom method\n signatures required by gogoproto."
+        }
+    }
+}

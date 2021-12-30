@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$ref": "#/definitions/CoinOutput",
+    "definitions": {
+        "CoinOutput": {
+            "properties": {
+                "ID": {
+                    "type": "string"
+                },
+                "coin": {
+                    "$ref": "#/definitions/cosmos.base.v1beta1.Coin",
+                    "additionalProperties": true
+                },
+                "program": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "CoinOutput models the continuum of valid outcomes for coin generation in recipes"
+        },
+        "cosmos.base.v1beta1.Coin": {
+            "properties": {
+                "denom": {
+                    "type": "string"
+                },
+                "amount": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "Coin defines a token with a denomination and an amount.\n\n NOTE: The amount field is an Int which implements the custom method\n signatures required by gogoproto."
+        }
+    }
+}

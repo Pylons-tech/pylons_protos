@@ -1,0 +1,41 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$ref": "#/definitions/MsgBurnDebtToken",
+    "definitions": {
+        "MsgBurnDebtToken": {
+            "properties": {
+                "creator": {
+                    "type": "string"
+                },
+                "redeemInfo": {
+                    "$ref": "#/definitions/Pylonstech.pylons.pylons.RedeemInfo",
+                    "additionalProperties": true
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "this line is used by starport scaffolding # proto/tx/message"
+        },
+        "Pylonstech.pylons.pylons.RedeemInfo": {
+            "properties": {
+                "ID": {
+                    "type": "string"
+                },
+                "processorName": {
+                    "type": "string"
+                },
+                "address": {
+                    "type": "string"
+                },
+                "amount": {
+                    "type": "string"
+                },
+                "signature": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        }
+    }
+}

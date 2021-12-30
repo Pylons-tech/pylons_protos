@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$ref": "#/definitions/DoubleInputParam",
+    "definitions": {
+        "DoubleInputParam": {
+            "properties": {
+                "key": {
+                    "type": "string"
+                },
+                "minValue": {
+                    "type": "string",
+                    "description": "The minimum legal value of this parameter."
+                },
+                "maxValue": {
+                    "type": "string",
+                    "description": "The maximum legal value of this parameter."
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "DoubleInputParam describes the bounds on an item input/output parameter of type float64"
+        }
+    }
+}
