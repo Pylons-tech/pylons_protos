@@ -24,7 +24,7 @@ jobs:
       - name: Install protodep
         run: go get github.com/stormcat24/protodep@latest
           
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
           
       - name: Make staging folder
         run: mkdir prototmp
