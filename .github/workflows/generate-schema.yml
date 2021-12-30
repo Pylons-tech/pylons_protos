@@ -34,8 +34,8 @@ jobs:
         
       - name: Emit schema
         run: |
-          cp -a prototmp proto
-          protoc --proto_path=proto/ --jsonschema_out=schema/ proto/pylons/*
+          cp -a proto prototmp
+          protoc --proto_path=prototmp/ --jsonschema_out=schema/ prototmp/pylons/*
 
           
       - name: Push commit
