@@ -1,4 +1,4 @@
-proto_outdir = "./proto"
+proto_outdir = "./prototmp"
 
 [[dependencies]]
   target = "github.com/stormcat24/protodep/protobuf"
