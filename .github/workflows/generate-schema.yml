@@ -26,6 +26,9 @@ jobs:
           
       - uses: actions/checkout@v1
           
+      - name: Make staging folder
+        run: mkdir prototmp
+          
       - name: Grab proto dependencies
         run: protodep up -u -f
         
