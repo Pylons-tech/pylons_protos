@@ -1,7 +1,7 @@
 # pylons_protos
 Protocol buffer types for the pylons ecosystem
 ## Dependencies
-* protoc
+* [protoc](https://grpc.io/docs/protoc-installation/)
 * An appropriate protoc plugin for the language you're compiling to
 * [protodep](https://github.com/stormcat24/protodep)
 
