@@ -1,6 +1,0 @@
-example/protodep.lock
-example/proto/*
-example/proto/*/
-example/drt/*
-example/drt/*/*
-example/drt/*/*/*
