@@ -1,0 +1,100 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$ref": "#/definitions/EventFulfillTrade",
+    "definitions": {
+        "EventFulfillTrade": {
+            "properties": {
+                "ID": {
+                    "type": "string"
+                },
+                "creator": {
+                    "type": "string"
+                },
+                "fulfiller": {
+                    "type": "string"
+                },
+                "itemInputs": {
+                    "items": {
+                        "$ref": "#/definitions/Pylonstech.pylons.pylons.ItemRef"
+                    },
+                    "type": "array"
+                },
+                "coinInputs": {
+                    "items": {
+                        "$ref": "#/definitions/cosmos.base.v1beta1.Coin"
+                    },
+                    "type": "array"
+                },
+                "itemOutputs": {
+                    "items": {
+                        "$ref": "#/definitions/Pylonstech.pylons.pylons.ItemRef"
+                    },
+                    "type": "array"
+                },
+                "coinOutputs": {
+                    "items": {
+                        "$ref": "#/definitions/cosmos.base.v1beta1.Coin"
+                    },
+                    "type": "array"
+                },
+                "paymentInfos": {
+                    "items": {
+                        "$ref": "#/definitions/Pylonstech.pylons.pylons.PaymentInfo"
+                    },
+                    "type": "array"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "Pylonstech.pylons.pylons.ItemRef": {
+            "properties": {
+                "cookbookID": {
+                    "type": "string"
+                },
+                "itemID": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "Pylonstech.pylons.pylons.PaymentInfo": {
+            "properties": {
+                "purchaseID": {
+                    "type": "string"
+                },
+                "processorName": {
+                    "type": "string"
+                },
+                "payerAddr": {
+                    "type": "string"
+                },
+                "amount": {
+                    "type": "string"
+                },
+                "productID": {
+                    "type": "string"
+                },
+                "signature": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "cosmos.base.v1beta1.Coin": {
+            "properties": {
+                "denom": {
+                    "type": "string"
+                },
+                "amount": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "Coin defines a token with a denomination and an amount.\n\n NOTE: The amount field is an Int which implements the custom method\n signatures required by gogoproto."
+        }
+    }
+}

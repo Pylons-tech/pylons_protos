@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$ref": "#/definitions/MsgUpdateCookbook",
+    "definitions": {
+        "MsgUpdateCookbook": {
+            "properties": {
+                "creator": {
+                    "type": "string"
+                },
+                "ID": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "developer": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string"
+                },
+                "supportEmail": {
+                    "type": "string"
+                },
+                "enabled": {
+                    "type": "boolean"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        }
+    }
+}

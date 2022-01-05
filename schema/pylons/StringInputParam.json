@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$ref": "#/definitions/StringInputParam",
+    "definitions": {
+        "StringInputParam": {
+            "properties": {
+                "key": {
+                    "type": "string"
+                },
+                "value": {
+                    "type": "string",
+                    "description": "The value of the parameter"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "StringInputParam describes the bounds on an item input/output parameter of type string"
+        }
+    }
+}

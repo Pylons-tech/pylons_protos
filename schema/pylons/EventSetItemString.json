@@ -1,0 +1,40 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$ref": "#/definitions/EventSetItemString",
+    "definitions": {
+        "EventSetItemString": {
+            "properties": {
+                "creator": {
+                    "type": "string"
+                },
+                "CookbookID": {
+                    "type": "string"
+                },
+                "ID": {
+                    "type": "string"
+                },
+                "originalMutableStrings": {
+                    "items": {
+                        "$ref": "#/definitions/Pylonstech.pylons.pylons.StringKeyValue"
+                    },
+                    "type": "array"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "Pylonstech.pylons.pylons.StringKeyValue": {
+            "properties": {
+                "Key": {
+                    "type": "string"
+                },
+                "Value": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "StringKeyValue describes string key/value set"
+        }
+    }
+}

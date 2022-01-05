@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$ref": "#/definitions/CreatePaymentAccount",
+    "definitions": {
+        "CreatePaymentAccount": {
+            "properties": {
+                "address": {
+                    "type": "string"
+                },
+                "token": {
+                    "type": "string"
+                },
+                "signature": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        }
+    }
+}

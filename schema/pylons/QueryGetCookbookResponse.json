@@ -1,0 +1,49 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$ref": "#/definitions/QueryGetCookbookResponse",
+    "definitions": {
+        "Pylonstech.pylons.pylons.Cookbook": {
+            "properties": {
+                "creator": {
+                    "type": "string"
+                },
+                "ID": {
+                    "type": "string"
+                },
+                "nodeVersion": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "developer": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string"
+                },
+                "supportEmail": {
+                    "type": "string"
+                },
+                "enabled": {
+                    "type": "boolean"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "QueryGetCookbookResponse": {
+            "properties": {
+                "Cookbook": {
+                    "$ref": "#/definitions/Pylonstech.pylons.pylons.Cookbook",
+                    "additionalProperties": true
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        }
+    }
+}

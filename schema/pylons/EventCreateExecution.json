@@ -1,0 +1,49 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$ref": "#/definitions/EventCreateExecution",
+    "definitions": {
+        "EventCreateExecution": {
+            "properties": {
+                "creator": {
+                    "type": "string"
+                },
+                "ID": {
+                    "type": "string"
+                },
+                "paymentInfos": {
+                    "items": {
+                        "$ref": "#/definitions/Pylonstech.pylons.pylons.PaymentInfo"
+                    },
+                    "type": "array"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "description": "EventCreateExecution contains the creator and ID of a created execution. Execution IDs are of the form {count-targetBlockHeight}"
+        },
+        "Pylonstech.pylons.pylons.PaymentInfo": {
+            "properties": {
+                "purchaseID": {
+                    "type": "string"
+                },
+                "processorName": {
+                    "type": "string"
+                },
+                "payerAddr": {
+                    "type": "string"
+                },
+                "amount": {
+                    "type": "string"
+                },
+                "productID": {
+                    "type": "string"
+                },
+                "signature": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        }
+    }
+}

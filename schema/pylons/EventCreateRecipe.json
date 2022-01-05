@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$ref": "#/definitions/EventCreateRecipe",
+    "definitions": {
+        "EventCreateRecipe": {
+            "properties": {
+                "creator": {
+                    "type": "string"
+                },
+                "CookbookID": {
+                    "type": "string"
+                },
+                "ID": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        }
+    }
+}
