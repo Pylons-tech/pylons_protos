@@ -11,6 +11,7 @@
                     "type": "array"
                 }
             },
+            "required": ["items", "type"],
             "additionalProperties": true,
             "type": "object"
         },
@@ -27,6 +28,7 @@
                     "type": "string"
                 }
             },
+            "required": ["ID", "coin", "program"],
             "additionalProperties": true,
             "type": "object",
             "description": "CoinOutput models the continuum of valid outcomes for coin generation in recipes"
@@ -45,6 +47,7 @@
                     "description": "The maximum legal value of this parameter."
                 }
             },
+            "required": ["key", "minValue", "maxValue"],
             "additionalProperties": true,
             "type": "object",
             "description": "DoubleInputParam describes the bounds on an item input/output parameter of type float64"
@@ -65,6 +68,7 @@
                     "description": "When program is not empty, weightRanges is ignored"
                 }
             },
+            "required": ["key", "weightRanges", "program"],
             "additionalProperties": true,
             "type": "object",
             "description": "DoubleParam describes the bounds on an item input/output parameter of type float64"
@@ -81,6 +85,7 @@
                     "type": "string"
                 }
             },
+            "required": ["upper", "lower", "weight"],
             "additionalProperties": true,
             "type": "object",
             "description": "DoubleWeightRange describes weight range that produce double value"
@@ -106,6 +111,7 @@
                     "type": "array"
                 }
             },
+            "required": ["coinOutputs", "itemOutputs", "itemModifyOutputs"],
             "additionalProperties": true,
             "type": "object",
             "description": "EntriesList is a struct to keep list of items and coins"
@@ -122,6 +128,7 @@
                     "type": "string"
                 }
             },
+            "required": ["upper", "lower", "weight"],
             "additionalProperties": true,
             "type": "object",
             "description": "IntWeightRange describes weight range that produce int value"
@@ -150,6 +157,7 @@
                     "type": "array"
                 }
             },
+            "required": ["ID", "doubles", "longs", "strings"],
             "additionalProperties": true,
             "type": "object",
             "description": "ItemInput is a struct for describing an input item"
@@ -208,6 +216,7 @@
                     "type": "boolean"
                 }
             },
+            "required": ["ID", "itemInputRef", "doubles", "longs", "strings", "mutableStrings", "transferFee", "tradePercentage", "quantity", "amountMinted", "tradeable"],
             "additionalProperties": true,
             "type": "object",
             "description": "ItemModifyOutput describes what is modified from item input"
@@ -263,6 +272,7 @@
                     "type": "boolean"
                 }
             },
+            "required": ["ID", "doubles", "longs", "strings", "mutableStrings", "transferFee", "tradePercentage", "quantity", "amountMinted", "tradeable"],
             "additionalProperties": true,
             "type": "object",
             "description": "ItemOutput models the continuum of valid outcomes for item generation in recipes"
@@ -281,6 +291,7 @@
                     "description": "The maximum legal value of this parameter."
                 }
             },
+            "required": ["key", "minValue", "maxValue"],
             "additionalProperties": true,
             "type": "object",
             "description": "LongInputParam describes the bounds on an item input/output parameter of type int64"
@@ -301,6 +312,7 @@
                     "description": "When program is not empty, weightRanges is ignored"
                 }
             },
+            "required": ["key", "weightRanges", "program"],
             "additionalProperties": true,
             "type": "object",
             "description": "LongParam describes the bounds on an item input/output parameter of type int64"
@@ -315,6 +327,7 @@
                     "description": "The value of the parameter"
                 }
             },
+            "required": ["key", "value"],
             "additionalProperties": true,
             "type": "object",
             "description": "StringInputParam describes the bounds on an item input/output parameter of type string"
@@ -328,6 +341,7 @@
                     "type": "string"
                 }
             },
+            "required": ["Key", "Value"],
             "additionalProperties": true,
             "type": "object",
             "description": "StringKeyValue describes string key/value set"
@@ -345,6 +359,7 @@
                     "description": "When program is not empty, value is ignored"
                 }
             },
+            "required": ["key", "value", "program"],
             "additionalProperties": true,
             "type": "object",
             "description": "StringParam describes an item input/output parameter of type string"
@@ -361,6 +376,7 @@
                     "type": "string"
                 }
             },
+            "required": ["entryIDs", "weight"],
             "additionalProperties": true,
             "type": "object",
             "description": "WeightedOutputs is to make structs which is using weight to be based on"
@@ -421,6 +437,7 @@
                     "type": "string"
                 }
             },
+            "required": ["cookbookID", "ID", "nodeVersion", "name", "description", "version", "coinInputs", "itemInputs", "entries", "outputs", "blockInterval", "costPerBlock", "enabled", "extraInfo"],
             "additionalProperties": true,
             "type": "object"
         },
@@ -433,6 +450,7 @@
                     "type": "string"
                 }
             },
+            "required": ["denom", "amount"],
             "additionalProperties": true,
             "type": "object",
             "description": "Coin defines a token with a denomination and an amount.\n\n NOTE: The amount field is an Int which implements the custom method\n signatures required by gogoproto."
