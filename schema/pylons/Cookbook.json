@@ -32,7 +32,7 @@
                     "type": "boolean"
                 }
             },
-            "required": ["creator", "ID", "nodeVersion", "name", "description", "developer", "version", "supportEmail", "enabled"],
+            "required": ["creator", "ID", "name", "description", "developer", "version", "supportEmail", "enabled"],
             "additionalProperties": true,
             "type": "object"
         }
