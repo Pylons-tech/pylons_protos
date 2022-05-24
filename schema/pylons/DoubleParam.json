@@ -18,7 +18,7 @@
                     "description": "When program is not empty, weightRanges is ignored"
                 }
             },
-            "required": ["key" "weightRanges", "program"],
+            "required": ["key", "weightRanges", "program"],
             "additionalProperties": true,
             "type": "object",
             "description": "DoubleParam describes the bounds on an item input/output parameter of type float64"
