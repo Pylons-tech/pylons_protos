@@ -11,6 +11,7 @@
                     "type": "array"
                 }
             },
+            "required": ["coins"],
             "additionalProperties": true,
             "type": "object"
         },
@@ -23,6 +24,7 @@
                     "type": "string"
                 }
             },
+            "required": ["denom", "amount"],
             "additionalProperties": true,
             "type": "object",
             "description": "Coin defines a token with a denomination and an amount.\n\n NOTE: The amount field is an Int which implements the custom method\n signatures required by gogoproto."
