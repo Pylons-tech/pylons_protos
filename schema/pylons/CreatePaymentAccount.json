@@ -14,6 +14,7 @@
                     "type": "string"
                 }
             },
+            "required": ["address", "token", "signature"],
             "additionalProperties": true,
             "type": "object"
         }
