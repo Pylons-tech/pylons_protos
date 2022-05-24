@@ -437,7 +437,7 @@
                     "type": "string"
                 }
             },
-            "required": ["cookbookID", "ID", "nodeVersion", "name", "description", "version", "coinInputs", "itemInputs", "entries", "outputs", "blockInterval", "costPerBlock", "enabled", "extraInfo"],
+            "required": ["cookbookID", "ID", "name", "description", "version", "coinInputs", "itemInputs", "entries", "outputs", "blockInterval", "costPerBlock", "enabled", "extraInfo"],
             "additionalProperties": true,
             "type": "object"
         },
