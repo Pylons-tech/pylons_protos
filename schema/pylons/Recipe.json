@@ -82,7 +82,7 @@
                     "type": "string"
                 },
                 "weight": {
-                    "type": "string"
+                    "type": "integer"
                 }
             },
             "required": ["upper", "lower", "weight"],
@@ -119,13 +119,13 @@
         "Pylonstech.pylons.pylons.IntWeightRange": {
             "properties": {
                 "lower": {
-                    "type": "string"
+                    "type": "integer"
                 },
                 "upper": {
-                    "type": "string"
+                    "type": "integer"
                 },
                 "weight": {
-                    "type": "string"
+                    "type": "integer"
                 }
             },
             "required": ["upper", "lower", "weight"],
@@ -206,17 +206,17 @@
                     "description": "The percentage of a trade sale retained by the cookbook owner. In the range (0.0, 1.0)."
                 },
                 "quantity": {
-                    "type": "string",
+                    "type": "integer",
                     "description": "quantity defines the maximum amount of these items that can be created. A 0 value indicates an infinite supply"
                 },
                 "amountMinted": {
-                    "type": "string"
+                    "type": "integer"
                 },
                 "tradeable": {
                     "type": "boolean"
                 }
             },
-            "required": ["ID", "itemInputRef", "doubles", "longs", "strings", "mutableStrings", "transferFee", "tradePercentage", "quantity", "amountMinted", "tradeable"],
+            "required": ["ID", "itemInputRef", "doubles", "longs", "strings", "mutableStrings", "transferFee", "tradePercentage", "tradeable"],
             "additionalProperties": true,
             "type": "object",
             "description": "ItemModifyOutput describes what is modified from item input"
@@ -262,11 +262,8 @@
                     "description": "The percentage of a trade sale retained by the cookbook owner. In the range (0.0, 1.0)."
                 },
                 "quantity": {
-                    "type": "string",
+                    "type": "integer",
                     "description": "quantity defines the maximum amount of these items that can be created. A 0 value indicates an infinite supply"
-                },
-                "amountMinted": {
-                    "type": "string"
                 },
                 "tradeable": {
                     "type": "boolean"
@@ -283,11 +280,11 @@
                     "type": "string"
                 },
                 "minValue": {
-                    "type": "string",
+                    "type": "integer",
                     "description": "The minimum legal value of this parameter."
                 },
                 "maxValue": {
-                    "type": "string",
+                    "type": "integer",
                     "description": "The maximum legal value of this parameter."
                 }
             },
@@ -373,7 +370,7 @@
                     "type": "array"
                 },
                 "weight": {
-                    "type": "string"
+                    "type": "integer"
                 }
             },
             "required": ["entryIDs", "weight"],
@@ -424,7 +421,7 @@
                     "type": "array"
                 },
                 "blockInterval": {
-                    "type": "string"
+                    "type": "integer"
                 },
                 "costPerBlock": {
                     "$ref": "#/definitions/cosmos.base.v1beta1.Coin",
