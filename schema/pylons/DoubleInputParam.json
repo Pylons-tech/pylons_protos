@@ -16,6 +16,7 @@
                     "description": "The maximum legal value of this parameter."
                 }
             },
+            "required": ["key", "minValue", "maxValue"],
             "additionalProperties": true,
             "type": "object",
             "description": "DoubleInputParam describes the bounds on an item input/output parameter of type float64"
