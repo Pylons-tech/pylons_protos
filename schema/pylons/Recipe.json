@@ -68,7 +68,7 @@
                     "description": "When program is not empty, weightRanges is ignored"
                 }
             },
-            "required": ["key", "weightRanges", "program"],
+            "required": ["key", "weightRanges"],
             "additionalProperties": true,
             "type": "object",
             "description": "DoubleParam describes the bounds on an item input/output parameter of type float64"
@@ -272,7 +272,7 @@
                     "type": "boolean"
                 }
             },
-            "required": ["ID", "doubles", "longs", "strings", "mutableStrings", "transferFee", "tradePercentage", "quantity", "amountMinted", "tradeable"],
+            "required": ["ID", "doubles", "longs", "strings", "mutableStrings", "transferFee", "tradePercentage", "tradeable"],
             "additionalProperties": true,
             "type": "object",
             "description": "ItemOutput models the continuum of valid outcomes for item generation in recipes"
@@ -312,7 +312,7 @@
                     "description": "When program is not empty, weightRanges is ignored"
                 }
             },
-            "required": ["key", "weightRanges", "program"],
+            "required": ["key", "weightRanges"],
             "additionalProperties": true,
             "type": "object",
             "description": "LongParam describes the bounds on an item input/output parameter of type int64"
@@ -359,7 +359,7 @@
                     "description": "When program is not empty, value is ignored"
                 }
             },
-            "required": ["key", "value", "program"],
+            "required": ["key", "value"],
             "additionalProperties": true,
             "type": "object",
             "description": "StringParam describes an item input/output parameter of type string"
