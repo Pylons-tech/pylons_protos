@@ -14,6 +14,7 @@
                     "type": "string"
                 }
             },
+            "required": ["lower", "upper", "weight"],
             "additionalProperties": true,
             "type": "object",
             "description": "DoubleWeightRange describes weight range that produce double value"
