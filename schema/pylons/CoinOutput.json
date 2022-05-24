@@ -15,6 +15,7 @@
                     "type": "string"
                 }
             },
+            "required": ["ID", "coin", "program"],
             "additionalProperties": true,
             "type": "object",
             "description": "CoinOutput models the continuum of valid outcomes for coin generation in recipes"
@@ -28,6 +29,7 @@
                     "type": "string"
                 }
             },
+            "required": ["denom", "amount"],
             "additionalProperties": true,
             "type": "object",
             "description": "Coin defines a token with a denomination and an amount.\n\n NOTE: The amount field is an Int which implements the custom method\n signatures required by gogoproto."
