@@ -20,6 +20,7 @@
                     "type": "string"
                 }
             },
+            "required": ["coinDenom", "packages", "googleInAppPurchasePubKey", "entityName"],
             "additionalProperties": true,
             "type": "object",
             "description": "CoinIssuer represents an entity or external blockchain"
@@ -36,6 +37,7 @@
                     "type": "string"
                 }
             },
+            "required": ["packageName", "productID", "amount"],
             "additionalProperties": true,
             "type": "object"
         }
