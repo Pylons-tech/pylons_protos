@@ -11,6 +11,7 @@
                     "type": "string"
                 }
             },
+            "required": ["key", "value"],
             "additionalProperties": true,
             "type": "object",
             "description": "DoubleKeyValue describes double key/value set"
